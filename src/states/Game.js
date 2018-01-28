@@ -2,15 +2,35 @@
 import Phaser from 'phaser-ce';
 import Paddle from '../prefabs/paddle';
 import Brick from '../prefabs/brick';
+import Ball from '../prefabs/ball';
 
 export default class extends Phaser.State {
+  constructor() {
+    super();
+
+    this.ballOnPaddle = true;
+  }
+
   init() {}
   preload() {}
 
   create() {
     this.setUpText();
     this.setUpPaddle();
+    this.setUpBall();
     this.setUpBricks();
+  }
+
+  setUpBall() {
+    this.ball = new Ball(this.game);
+    this.game.add.existing(this.ball);
+
+    this.putBallOnPaddle();
+  }
+
+  putBallOnPaddle() {
+    this.ballOnPaddle = true;
+    this.ball.reset(this.paddle.body.x, this.paddle.y - this.paddle.body.height * 2);
   }
 
   setUpPaddle() {
@@ -66,6 +86,11 @@ export default class extends Phaser.State {
       .setTextBounds(0, 0, this.game.world.width, 0);
   }
 
-  render() {
+  update() {
+    if (this.ballOnPaddle) {
+      this.ball.body.x = this.paddle.x - (this.ball.width / 2);
+    }
   }
+
+  render() {}
 }
