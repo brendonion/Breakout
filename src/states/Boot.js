@@ -1,12 +1,21 @@
 // @flow
 import Phaser from 'phaser-ce';
 import WebFont from 'webfontloader';
+import globals from './globals/index';
 
 export default class extends Phaser.State {
   init() {
-    this.stage.backgroundColor = '#EDEEC9';
+    this.stage.backgroundColor = '#fff';
     this.fontsReady = false;
     this.fontsLoaded = this.fontsLoaded.bind(this);
+  }
+
+  create() {
+    this.initGlobalVariables();
+  }
+
+  initGlobalVariables() {
+    this.game.global = {...globals};
   }
 
   preload() {
@@ -22,6 +31,9 @@ export default class extends Phaser.State {
 
     this.load.image('loaderBg', './assets/images/loader-bg.png');
     this.load.image('loaderBar', './assets/images/loader-bar.png');
+
+    this.load.image('brick', './assets/images/brick.png');
+    this.load.image('paddle', './assets/images/paddle.png');
   }
 
   render() {
