@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Ball</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ball" transform="translate(5.000000, 5.000000)">
+            <circle id="Oval-3" stroke="#505050" stroke-width="9" fill="#787878" cx="25" cy="25" r="25"></circle>
+            <ellipse id="Oval-4" fill="#D8D8D8" transform="translate(30.758119, 12.588292) rotate(-66.000000) translate(-30.758119, -12.588292) " cx="30.7581186" cy="12.5882921" rx="3.5" ry="7"></ellipse>
+        </g>
+    </g>
+</svg>
