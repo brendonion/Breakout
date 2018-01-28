@@ -1,5 +1,5 @@
 // @flow
-import Phaser from 'phaser-ce';
+import 'phaser';
 import WebFont from 'webfontloader';
 import globals from './globals/index';
 

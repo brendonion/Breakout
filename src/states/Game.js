@@ -1,5 +1,5 @@
 // @flow
-import Phaser from 'phaser-ce';
+import 'phaser';
 import Paddle from '../prefabs/paddle';
 import Brick from '../prefabs/brick';
 import Ball from '../prefabs/ball';
